@@ -1,0 +1,22 @@
+[
+    {
+      "model": "miapp.usuari",
+      "pk": 1,
+      "fields": {
+        "nom_usu": "Juan Pérez",
+        "email": "juan@example.com",
+        "contrasenya": "password123",
+        "adreca_usu": "Avenida de la Innovación 123, Barcelona, España, 08018"
+      }
+    },
+    {
+      "model": "miapp.usuari",
+      "pk": 2,
+      "fields": {
+        "nom_usu": "Ana López",
+        "email": "ana@example.com",
+        "contrasenya": "pass456",
+        "adreca_usu": "Calle del Sol 456, Madrid, España, 28013"
+      }
+    }
+  ]
