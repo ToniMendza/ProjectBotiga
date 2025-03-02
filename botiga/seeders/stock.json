@@ -1,0 +1,38 @@
+[
+    {
+        "model": "botiga.Stock",
+        "pk": 2,
+        "fields": {
+            "variant": 1,
+            "talla": 2,
+            "quantitat": 15
+        }
+    },
+    {
+        "model": "botiga.Stock",
+        "pk": 3,
+        "fields": {
+            "variant": 2,
+            "talla": 3,
+            "quantitat": 12
+        }
+    },
+    {
+        "model": "botiga.Stock",
+        "pk": 4,
+        "fields": {
+            "variant": 3,
+            "talla": 1,
+            "quantitat": 20
+        }
+    },
+    {
+        "model": "botiga.Stock",
+        "pk": 5,
+        "fields": {
+            "variant": 4,
+            "talla": 2,
+            "quantitat": 18
+        }
+    }
+]

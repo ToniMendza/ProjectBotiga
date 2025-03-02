@@ -14,13 +14,22 @@ class Usuari(models.Model):
     contrasenya = models.CharField(max_length=255, null=False)
     adreca_usu = models.TextField(null=True)
 
+    def __str__(self):
+        return self.nom_usu  
+
 class Categoria(models.Model):
     nom_cat = models.CharField(max_length=100, null=False)
     pare = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
 
+    def __str__(self):
+        return self.nom_cat
+    
 class Producte(models.Model):
     nom_prod = models.CharField(max_length=150, null=False)
     descripcio = models.TextField(null=False)
+
+    def __str__(self):
+        return self.nom_prod  
 
 class ProducteCategoria(models.Model):
     id_categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
@@ -43,7 +52,7 @@ class Stock(models.Model):
 
 class IVA(models.Model):
     percentatge = models.DecimalField(max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
-
+    nom_iva = models.CharField(max_length=150, null=False)
 class MetodeEnviament(models.Model):
     nom_env = models.CharField(max_length=50, null=False)
     preu_base = models.DecimalField(max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
@@ -83,6 +92,9 @@ class Factura(models.Model):
     base_imposable = models.DecimalField(max_digits=10, decimal_places=2, validators=[MinValueValidator(0)])
     enviu = models.ForeignKey(MetodeEnviament, on_delete=models.CASCADE)
     met_pagament = models.ForeignKey(MetodePagament, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return super().__str__()
 
 class LineaFactura(models.Model):
     factura = models.ForeignKey(Factura, on_delete=models.CASCADE)

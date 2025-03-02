@@ -1,0 +1,26 @@
+[
+    {
+        "model": "botiga.ProducteCategoria",
+        "pk": 1,
+        "fields": {
+            "id_producte": 1,
+            "id_categoria": 3
+        }
+    },
+    {
+        "model": "botiga.ProducteCategoria",
+        "pk": 2,
+        "fields": {
+            "id_producte": 2,
+            "id_categoria": 3
+        }
+    },
+    {
+        "model": "botiga.ProducteCategoria",
+        "pk": 3,
+        "fields": {
+            "id_producte": 3,
+            "id_categoria": 4
+        }
+    }
+]

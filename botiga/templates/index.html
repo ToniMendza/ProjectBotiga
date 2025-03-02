@@ -1,0 +1,17 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<h1>Productos Disponibles</h1>
+
+<div class="product-list">
+    {% for product in products %}
+        <div class="product-card">
+            <h3>{{ product.nom_prod }}</h3>
+            <p>{{ product.descripcio }}</p>
+        </div>
+    {% empty %}
+        <p>No hay productos en esta categoría.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

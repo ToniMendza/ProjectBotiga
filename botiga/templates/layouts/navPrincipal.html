@@ -1,0 +1,9 @@
+{% block content %}
+<nav class="navbar">
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'category_filter' category.nom_cat %}">{{ category.nom_cat }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endblock %}

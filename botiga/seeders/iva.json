@@ -1,0 +1,18 @@
+[
+    {
+      "model": "botiga.IVA",
+      "pk": 1,
+      "fields": {
+        "nom_iva": "IVA general",
+        "percentatge": 21
+      }
+    },
+    {
+      "model": "botiga.IVA",
+      "pk": 2,
+      "fields": {
+        "nom_iva": "IVA reduit",
+        "percentatge": 4
+      }
+    }
+  ]

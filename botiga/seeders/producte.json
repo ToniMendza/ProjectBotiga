@@ -1,0 +1,26 @@
+[
+    {
+        "model": "botiga.Producte",
+        "pk": 1,
+        "fields": {
+            "nom_prod": "Nike Air Zoom",
+            "descripcio": "Sabatilles lleugeres per córrer de Nike"
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 2,
+        "fields": {
+            "nom_prod": "Adidas Ultraboost",
+            "descripcio": "Sabatilles còmoda i de gran retorn d'energia"
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 3,
+        "fields": {
+            "nom_prod": "Jordan Retro 4",
+            "descripcio": "Sabates clàssiques de bàsquet amb estil retro"
+        }
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "model": "botiga.MetodeEnviament",
+        "pk": 1,
+        "fields": {
+            "nom_env": "Estàndard (3-5 dies)",
+            "preu_base": 5.00,
+            "preu_min_gratis": 50.00,
+            "iva": 2
+        }
+    },
+    {
+        "model": "botiga.MetodeEnviament",
+        "pk": 2,
+        "fields": {
+            "nom_env": "Exprés (1-2 dies)",
+            "preu_base": 10.00,
+            "preu_min_gratis": 100.00,
+            "iva": 1
+        }
+    }
+]

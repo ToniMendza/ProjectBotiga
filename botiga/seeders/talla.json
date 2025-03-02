@@ -1,0 +1,23 @@
+[
+    {
+        "model": "botiga.Talla",
+        "pk": 1,
+        "fields": {
+            "n_talla": 40
+        }
+    },
+    {
+        "model": "botiga.Talla",
+        "pk": 2,
+        "fields": {
+            "n_talla": 42
+        }
+    },
+    {
+        "model": "botiga.Talla",
+        "pk": 3,
+        "fields": {
+            "n_talla": 44
+        }
+    }
+]

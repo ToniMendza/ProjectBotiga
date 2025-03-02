@@ -1,0 +1,46 @@
+[
+    {
+        "model": "botiga.Variant",
+        "pk": 1,
+        "fields": {
+            "color": "Blau",
+            "preu": 120.00,
+            "descompte": 10.00,
+            "producte": 1,
+            "imatge": "nike_air_zoom_blau.jpg"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 2,
+        "fields": {
+            "color": "Negre",
+            "preu": 130.00,
+            "descompte": 5.00,
+            "producte": 1,
+            "imatge": "nike_air_zoom_negre.jpg"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 3,
+        "fields": {
+            "color": "Blanc",
+            "preu": 150.00,
+            "descompte": 15.00,
+            "producte": 2,
+            "imatge": "adidas_ultraboost_blanc.jpg"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 4,
+        "fields": {
+            "color": "Vermell",
+            "preu": 140.00,
+            "descompte": 8.00,
+            "producte": 3,
+            "imatge": "jordan_retro4_vermell.jpg"
+        }
+    }
+]

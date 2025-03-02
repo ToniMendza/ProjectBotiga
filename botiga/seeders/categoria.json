@@ -1,0 +1,34 @@
+[
+    {
+        "model": "botiga.Categoria",
+        "pk": 1,
+        "fields": {
+            "nom_cat": "Home",
+            "pare": null
+        }
+    },
+    {
+        "model": "botiga.Categoria",
+        "pk": 2,
+        "fields": {
+            "nom_cat": "Dona",
+            "pare": null
+        }
+    },
+    {
+        "model": "botiga.Categoria",
+        "pk": 3,
+        "fields": {
+            "nom_cat": "Running",
+            "pare": 1
+        }
+    },
+    {
+        "model": "botiga.Categoria",
+        "pk": 4,
+        "fields": {
+            "nom_cat": "Futbol",
+            "pare": 2
+        }
+    }
+]
