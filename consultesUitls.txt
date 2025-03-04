@@ -1,0 +1,9 @@
+Productes amb la seva categoria i el seu pare:
+SELECT bp.*, bc.nom_cat AS categoria, cpare.nom_cat AS categoria_pare FROM botiga_producte bp
+ JOIN botiga_productecategoria bpc ON bp.id = bpc.id_producte_id RIGHT JOIN botiga_categoria bc ON
+ bc.id = bpc.id_categoria_id LEFT JOIN botiga_categoria cpare ON bc.pare_id = cpare.id; 
+
+
+SELECT bp.*, bc.nom_cat AS categoria, cpare.nom_cat,bc.pare_id AS categoria_pare FROM botiga_producte bp
+ JOIN botiga_productecategoria bpc ON bp.id = bpc.id_producte_id RIGHT JOIN botiga_categoria bc ON
+ bc.id = bpc.id_categoria_id LEFT JOIN botiga_categoria cpare ON bc.pare_id = cpare.id; 

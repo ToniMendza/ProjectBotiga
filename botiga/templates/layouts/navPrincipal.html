@@ -1,9 +1,18 @@
 {% block content %}
-<nav class="navbar">
+<div class="filtreNom">
+    <h4>Nom</h4>
+    <form method="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+        <input type="text" name="nom" value="{{ name_query }}" placeholder="Nom del producte">
+        <button type="submit">Filtrar</button>
+    </form>
+</div>
+<div class="navbar">
     <ul>
         {% for category in categories %}
-            <li><a href="{% url 'category_filter' category.nom_cat %}">{{ category.nom_cat }}</a></li>
+            <li><a href="{% url 'category_filter' category.id %}">{{ category.nom_cat }}</a></li>
         {% endfor %}
     </ul>
-</nav>
+</div>
 {% endblock %}
+

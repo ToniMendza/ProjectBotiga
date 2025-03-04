@@ -24,6 +24,15 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nom_cat
     
+    # def get_ancestors(self):
+    #     """ Devuelve la jerarquía de la categoría hasta la raíz (para el breadcrumb) """
+    #     ancestors = []
+    #     category = self
+    #     while category:
+    #         ancestors.insert(0, category)
+    #         category = category.pare  # Subir en la jerarquía
+    #     return ancestors
+    
 class Producte(models.Model):
     nom_prod = models.CharField(max_length=150, null=False)
     descripcio = models.TextField(null=False)
@@ -44,6 +53,9 @@ class Variant(models.Model):
 
 class Talla(models.Model):
     n_talla = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(60)])
+
+    def __str__(self):
+        return str(self.n_talla)
 
 class Stock(models.Model):
     variant = models.ForeignKey(Variant, on_delete=models.CASCADE)

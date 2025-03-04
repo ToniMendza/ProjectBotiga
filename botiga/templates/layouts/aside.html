@@ -1,0 +1,37 @@
+<div class="filtres">
+    <h3>Filtres</h3>
+
+    <!-- 🔹 Filtro por Precio -->
+    <div class="filtrePreu">
+        <h4>Preu</h4>
+        <form method="POST" action="{% url 'home' %}">
+            {% csrf_token %}
+            <label for="min">Mínim:</label>
+            <input type="number" name="min" value="{{ min_price }}" placeholder="0€" min="0">
+            
+            <label for="max">Màxim:</label>
+            <input type="number" name="max" value="{{ max_price }}" placeholder="200€" min="0">
+            
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
+
+    <!-- 🔹 Filtro por Talla -->
+    <div class="filtreTalla">
+        <h4>Talla</h4>
+        <form method="POST" action="{% url 'home' %}">
+            {% csrf_token %}
+            {% for talla in talles %}
+                <label>
+                    <input type="checkbox" name="talla" value="{{ talla }}"
+                        {% if talla in selected_sizes %} checked {% endif %}>
+                    {{ talla }}
+                </label>
+            {% endfor %}
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
+    <form method="GET" action="{% url 'home' %}">
+        <button type="submit" name="clear_filters" class="clear-btn">Borrar Filtros</button>
+    </form>
+</div>

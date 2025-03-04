@@ -9,11 +9,16 @@
 </head>
 <body>
 
-    {% include 'layouts/navPrincipal.html' %}  <!-- Aquí incluimos el menú -->
+    <nav>
+        {% include 'layouts/navPrincipal.html' %}
+    </nav>
 
     <main>
         {% block content %}{% endblock %}
     </main>
 
+    <aside>
+        {% include 'layouts/aside.html' %}
+    </aside>
 </body>
 </html>

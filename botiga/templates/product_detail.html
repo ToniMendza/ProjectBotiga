@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <h1>{{ product.nom_prod }}</h1>
+    <p>{{ product.descripcio }}</p>
+    <h2>Precio: {{ selected_variant.preu }}€</h2>
+
+    <!-- 🔹 Selección de variantes -->
+    <h3>Colores Disponibles:</h3>
+    <ul>
+        {% for variant in variants %}
+            <li>
+                <a href="{% url 'product_detail_variant' product.id variant.id %}">
+                    {{ variant.color }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- 🔹 Tallas disponibles -->
+    <h3>Selecciona tu talla:</h3>
+    <ul>
+        {% for stock in stocks %}
+            {% if stock.quantitat > 0 %}
+                <li>{{ stock.talla.n_talla }}</li>
+            {% else %}
+                <li style="color: gray;">{{ stock.talla.n_talla }} (No disponible)</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <button>Añadir a la cesta</button>
+{% endblock %}

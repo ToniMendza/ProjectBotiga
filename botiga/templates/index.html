@@ -3,15 +3,59 @@
 {% block content %}
 <h1>Productos Disponibles</h1>
 
+<!-- 🏠 Breadcrumb de navegación -->
+<div>
+    <h3>Ruta de categorías:</h3>
+    <ul>
+        <!-- <li><a href="{% url 'home' %}">Home</a></li> -->
+        {% for cat in catAcumulades %}
+            <ol><a href="{% url 'category_filter' cat.id %}">{{ cat.nom_cat }}</a>></ol>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- 🔹 Seleccionar subcategoría -->
+{% if subcategories %}
+<div>
+    <h3>Selecciona una subcategoría:</h3>
+    <ul>
+        {% for sub in subcategories %}
+            <li><a href="{% url 'category_filter' sub.id %}">{{ sub.nom_cat }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<!-- 📦 Lista de productos -->
 <div class="product-list">
-    {% for product in products %}
-        <div class="product-card">
-            <h3>{{ product.nom_prod }}</h3>
-            <p>{{ product.descripcio }}</p>
-        </div>
-    {% empty %}
+    {% if products %}
+        {% for product in products %}
+            <div class="product-card">
+                <h3>{{ product.nom_prod }}</h3>
+                <a href="{% url 'product_detail' product.id %}">                    {{ product.nom_prod }}
+                </a></li>
+                                <p>{{ product.descripcio }}</p>
+            
+                <ul>
+                    {% for variant in product.variant_set.all %}
+                        <li>{{ variant.color }} - {{ variant.preu }}€</li>
+                    {% endfor %}
+                </ul> 
+
+                <p>Tallas disponibles:</p>
+                <ul>
+                    {% for variant in product.variant_set.all %}
+                    {% for stock in variant.stock_set.all %}
+                        <li>{{ stock.talla.n_talla }}</li>
+                    {% endfor %}
+                    {% endfor %}
+                
+                </ul>
+            </div>
+        {% endfor %}
+    {% else %}
         <p>No hay productos en esta categoría.</p>
-    {% endfor %}
+    {% endif %}
 </div>
 
 {% endblock %}
