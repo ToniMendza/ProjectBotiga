@@ -1,61 +1,142 @@
 {% extends 'layouts/base.html' %}
 
 {% block content %}
-<h1>Productos Disponibles</h1>
+<div class="w-80">
 
-<!-- 🏠 Breadcrumb de navegación -->
-<div>
-    <h3>Ruta de categorías:</h3>
-    <ul>
-        <!-- <li><a href="{% url 'home' %}">Home</a></li> -->
-        {% for cat in catAcumulades %}
-            <ol><a href="{% url 'category_filter' cat.id %}">{{ cat.nom_cat }}</a>></ol>
-        {% endfor %}
-    </ul>
+<!-- breadcrumb (miga de pan) es nativa de Bootstrap. Es un tipo de navegación
+  que muestra la ubicación del usuario dentro de una jerarquía de páginas en un sitio web. -->
+<nav class="breadcrumb-container bg-light shadow-sm py-2">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'home' %}" class="text-decoration-none text-primary">Inicio</a>
+                </li>
+                {% for cat in catAcumulades %}
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'category_filter' cat.id %}" class="text-decoration-none text-dark">
+                            {{ cat.nom_cat }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ol>
+        </nav>
+    </div>
+</nav>
+
+<!-- 🛒 Espacio adicional para evitar que se solape con el contenido -->
+
+{% load static %}
+
+<!-- 🏷️ Contenedor de productos -->
+<div class="container py-4">
+    <!-- Tamaño pequeño: una columna, mediana: 2 columnas y grande: 3 columnas -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+        {% if products %}
+            {% for product in products %}
+                <div class="col">
+                    <div class="card h-100 shadow-sm card-custom card-hover">
+                        <!-- 📷 Imagen principal del producto -->
+                         <!-- Seleccionamos un variant por defecto para mostrar la información del producto -->
+                        {% with product.variant_set.first as default_variant %}
+                        <div class="text-center p-3">
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img id="mainImage-{{ product.id }}" src="{% static default_variant.imatge %}" 
+                                     alt="{{ default_variant.color }}" class="img-fluid main-image">
+                            </a>
+                        </div>
+
+                        <!-- ℹ️ Información del producto -->
+                        <div class="card-body text-center d-flex flex-column">
+                            <h6 class="card-title text-dark fw-bold title-fixed">
+                                <a href="{% url 'product_detail' product.id %}" class="text-decoration-none text-dark">
+                                    {{ product.nom_prod }}
+                                </a>
+                            </h6>
+                            <p class="card-text">{{ product.descripcio }}</p>
+
+                            <!-- 💰 Precio y descuento -->
+                            <div>
+                                <div class="price-section">
+                                    <small id="oldPrice-{{ product.id }}" class="text-muted text-decoration-line-through fs-6">
+                                        {{ default_variant.preu }}€
+                                    </small>
+                                    <div>
+                                        <span id="newPrice-{{ product.id }}" class="text-success fw-bold fs-5">
+                                            {{ default_variant.preu|floatformat:2 }}€
+                                        </span>
+                                        <span id="discount-{{ product.id }}" class="badge bg-success ms-2">
+                                            {{ default_variant.descompte }}% OFF
+                                        </span>
+                                    </div>
+                                    <p class="text-muted" id="color-{{ product.id }}">{{ default_variant.color }}</p>
+                                </div>
+                            </div>
+
+                            <!-- 📏 Tallas disponibles -->
+                            <p class="mt-3 fw-bold">Talles disponibles:</p>
+                            <ul id="sizes-{{ product.id }}" class="list-inline">
+                                {% for stock in default_variant.stock_set.all %}
+                                    <li class="list-inline-item badge bg-secondary p-2">{{ stock.talla.n_talla }}</li>
+                                {% endfor %}
+                            </ul>
+
+                            <!-- 
+                                class="img-thumbnail mx-1 variant-thumbnail"
+                                Esta clase se utiliza para estilizar una imagen como una miniatura con margen adicional y estilo específico de variante.
+                                - img-thumbnail: Aplica el estilo de miniatura de Bootstrap a la imagen.
+                                - mx-1: Añade un pequeño margen horizontal a la imagen.
+                                - variant-thumbnail: Clase personalizada para un estilo adicional específico de la variante.
+                            -->
+                            <!-- 🖼️ Miniaturas de variantes -->
+                            <div class="d-flex flex-wrap justify-content-center mt-3">
+                                {% for variant in product.variant_set.all %}
+                                    <img src="{% static variant.imatge %}" 
+                                         alt="{{ variant.color }}" 
+                                         class="img-thumbnail mx-1 variant-thumbnail"
+                                         width="70" 
+                                         height="70"
+                                         onclick="updateProduct('{{ product.id }}', 
+                                                                '{% static variant.imatge %}', 
+                                                                '{{ variant.preu }}', 
+                                                                '{{ variant.descompte }}', 
+                                                                '{{ variant.color }}', 
+                                                                [{% for stock in variant.stock_set.all %}'{{ stock.talla.n_talla }}'{% if not forloop.last %}, {% endif %}{% endfor %}])">
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endwith %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="text-center text-muted">No hi ha productes en aquesta categoria.</p>
+        {% endif %}
+    </div>
+</div>
 </div>
 
-<!-- 🔹 Seleccionar subcategoría -->
-{% if subcategories %}
-<div>
-    <h3>Selecciona una subcategoría:</h3>
-    <ul>
-        {% for sub in subcategories %}
-            <li><a href="{% url 'category_filter' sub.id %}">{{ sub.nom_cat }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
-{% endif %}
+<!-- 📜 JavaScript para actualizar la tarjeta -->
+<script>
+    // Como todas las variantes son del mismo producto, solo necesitamos el id del producto para actualizar la tarjeta.
+    // Utilizamos los id de los elementos de la tarjeta para actualizar la información de la tarjeta.
+    function updateProduct(productId, newImage, newPrice, discount, color, sizes) {
+        document.getElementById('mainImage-' + productId).src = newImage;
+        document.getElementById('oldPrice-' + productId).textContent = newPrice + '€';
+        document.getElementById('newPrice-' + productId).textContent = (newPrice * (1 - discount / 100)).toFixed(2) + '€';
+        document.getElementById('discount-' + productId).textContent = discount + '% OFF';
+        document.getElementById('color-' + productId).textContent = color;
 
-<!-- 📦 Lista de productos -->
-<div class="product-list">
-    {% if products %}
-        {% for product in products %}
-            <div class="product-card">
-                <h3>{{ product.nom_prod }}</h3>
-                <a href="{% url 'product_detail' product.id %}">                    {{ product.nom_prod }}
-                </a></li>
-                                <p>{{ product.descripcio }}</p>
-            
-                <ul>
-                    {% for variant in product.variant_set.all %}
-                        <li>{{ variant.color }} - {{ variant.preu }}€</li>
-                    {% endfor %}
-                </ul> 
-
-                <p>Tallas disponibles:</p>
-                <ul>
-                    {% for variant in product.variant_set.all %}
-                    {% for stock in variant.stock_set.all %}
-                        <li>{{ stock.talla.n_talla }}</li>
-                    {% endfor %}
-                    {% endfor %}
-                
-                </ul>
-            </div>
-        {% endfor %}
-    {% else %}
-        <p>No hay productos en esta categoría.</p>
-    {% endif %}
-</div>
+        // Actualizar las tallas disponibles
+        let sizesContainer = document.getElementById('sizes-' + productId);
+        sizesContainer.innerHTML = ''; // Limpiar contenido anterior
+        sizes.forEach(size => {
+            let sizeElement = document.createElement('li');
+            sizeElement.className = 'list-inline-item badge bg-secondary p-2';
+            sizeElement.textContent = size;
+            sizesContainer.appendChild(sizeElement);
+        });
+    }
+</script>
 
 {% endblock %}

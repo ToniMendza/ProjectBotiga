@@ -4,7 +4,8 @@
         "pk": 1,
         "fields": {
             "nom_prod": "Nike Air Zoom",
-            "descripcio": "Sabatilles lleugeres per córrer de Nike"
+            "descripcio": "Sabatilles lleugeres per córrer de Nike",
+            "categories": [8]
         }
     },
     {
@@ -12,7 +13,8 @@
         "pk": 2,
         "fields": {
             "nom_prod": "Adidas Ultraboost",
-            "descripcio": "Sabatilles còmoda i de gran retorn d'energia"
+            "descripcio": "Sabatilles còmoda i de gran retorn d'energia",
+            "categories": [9]
         }
     },
     {
@@ -20,7 +22,71 @@
         "pk": 3,
         "fields": {
             "nom_prod": "Jordan Retro 4",
-            "descripcio": "Sabates clàssiques de bàsquet amb estil retro"
+            "descripcio": "Sabates clàssiques de bàsquet amb estil retro",
+            "categories": [4]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 4,
+        "fields": {
+            "nom_prod": "Puma RS-X",
+            "descripcio": "Disseny retro i tecnologia moderna per a màxim confort",
+            "categories": [5]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 5,
+        "fields": {
+            "nom_prod": "New Balance 990",
+            "descripcio": "Sabatilles icòniques per a running i moda urbana",
+            "categories": [4]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 6,
+        "fields": {
+            "nom_prod": "Converse Chuck Taylor",
+            "descripcio": "La clàssica sabata de lona amb estil atemporal",
+            "categories": [5]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 7,
+        "fields": {
+            "nom_prod": "Reebok Classic",
+            "descripcio": "Sabatilles clàssiques amb un toc modern",
+            "categories": [6]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 8,
+        "fields": {
+            "nom_prod": "Asics Gel-Kayano",
+            "descripcio": "Sabatilles de running amb gran estabilitat i suport",
+            "categories": [7]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 9,
+        "fields": {
+            "nom_prod": "Vans Old Skool",
+            "descripcio": "Sabatilles de skate amb disseny clàssic",
+            "categories": [14]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 10,
+        "fields": {
+            "nom_prod": "Under Armour HOVR",
+            "descripcio": "Sabatilles de running amb gran amortiment",
+            "categories": [15]
         }
     }
 ]

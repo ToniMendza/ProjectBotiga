@@ -19,5 +19,8 @@
         "fields": {
             "n_talla": 44
         }
-    }
+    },
+    {"model": "botiga.Talla", "pk": 4, "fields": {"n_talla": 46}},
+    {"model": "botiga.Talla", "pk": 5, "fields": {"n_talla": 48}}
+ 
 ]

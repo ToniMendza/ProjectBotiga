@@ -16,9 +16,13 @@ def get_ancestor_categories(category):
         category = category.pare
     return ancestors
 
+
 def product_list(request, category_id=None, product_id=None, variant_id=None,talla_id=None):
     categories = Categoria.objects.filter(pare__isnull=True)
     products = Producte.objects.prefetch_related("variant_set")
+
+    # categories_with_subs = {category: list(category.categoria_set.all()) for category in categories}
+
     # products = Producte.objects.filter(
     #     variant__stock__quantitat__gt=0
     # ).distinct().prefetch_related("variant_set")
@@ -57,8 +61,9 @@ def product_list(request, category_id=None, product_id=None, variant_id=None,tal
         subcategories = Categoria.objects.filter(pare=selected_category)
 
         descendant_categories = [selected_category] + get_descendant_categories(selected_category)
-        product_ids = ProducteCategoria.objects.filter(id_categoria__in=descendant_categories).values_list("id_producte", flat=True)
-        products = Producte.objects.filter(id__in=product_ids).prefetch_related('variant_set')  # Prefetch variants
+    #    recuperamos los productos de la categoría seleccionada y sus descendientes
+        products = Producte.objects.filter(categories__in=descendant_categories).distinct().prefetch_related('variant_set')
+
 
     # 🔹 Aplicar Filtros
     if name_query:
@@ -78,15 +83,15 @@ def product_list(request, category_id=None, product_id=None, variant_id=None,tal
         # Filtrar productos según las tallas seleccionadas
         products = products.filter(variant__stock__talla__in=selected_sizes).distinct()
 
-    if product_id:
-        product = get_object_or_404(Producte, id=product_id)
-        variants = product.variant_set.all()
-        if variant_id:
-            variant = get_object_or_404(variants, id=variant_id)
-            stocks = variant.stock_set.all()
-            if talla_id:
-                stock = get_object_or_404(stocks, talla_id=talla_id)
-        return redirect("home")    
+    # if product_id:
+    #     product = get_object_or_404(Producte, id=product_id)
+    #     variants = product.variant_set.all()
+    #     if variant_id:
+    #         variant = get_object_or_404(variants, id=variant_id)
+    #         stocks = variant.stock_set.all()
+    #         if talla_id:
+    #             stock = get_object_or_404(stocks, talla_id=talla_id)
+    #     return redirect("home")    
 
     return render(request, 'index.html', {
         'categories': categories,
@@ -98,12 +103,24 @@ def product_list(request, category_id=None, product_id=None, variant_id=None,tal
         'min_price': min_price,
         'max_price': max_price,
         'selected_sizes': selected_sizes,
-        'talles': talles
+        'talles': talles,
+        # 'categories_with_subs': categories_with_subs
     })
 
 def product_detall(request, product_id, variant_id=None):
     product = get_object_or_404(Producte, id=product_id)
+    selected_category=None
+    catAcumulades = []
+
+    # 🔹 Obtener la primera categoría asociada al producto (o dejar en None si no tiene)
+    selected_category = product.categories.first()
+
+    # 🔹 Si tiene categoría, obtener historial de categorías
+    catAcumulades = get_ancestor_categories(selected_category) if selected_category else []
+
+    # 🔹 Obtener todas las variantes del producto
     variants = product.variant_set.all()
+
 
     # Si se selecciona una variante, la usamos; si no, tomamos la primera
     if variant_id:
@@ -111,12 +128,14 @@ def product_detall(request, product_id, variant_id=None):
     else:
         selected_variant = variants.first()
 
+    # Obtener stocks de la variante seleccionada
     stocks = selected_variant.stock_set.all()
 
     return render(request, 'product_detail.html', {
         'product': product,
         'variants': variants,
         'selected_variant': selected_variant,
-        'stocks': stocks
+        'stocks': stocks,
+        'selected_category': selected_category,
+        'catAcumulades': catAcumulades  # 🔹 Pasamos las categorías acumuladas a la plantilla
     })
-

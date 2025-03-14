@@ -22,27 +22,18 @@ class Categoria(models.Model):
     pare = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return self.nom_cat
-    
-    # def get_ancestors(self):
-    #     """ Devuelve la jerarquía de la categoría hasta la raíz (para el breadcrumb) """
-    #     ancestors = []
-    #     category = self
-    #     while category:
-    #         ancestors.insert(0, category)
-    #         category = category.pare  # Subir en la jerarquía
-    #     return ancestors
+        return self.nom_cat   
     
 class Producte(models.Model):
     nom_prod = models.CharField(max_length=150, null=False)
     descripcio = models.TextField(null=False)
-
+    categories = models.ManyToManyField('Categoria', related_name="productes")
     def __str__(self):
         return self.nom_prod  
 
-class ProducteCategoria(models.Model):
-    id_categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
-    id_producte = models.ForeignKey(Producte, on_delete=models.CASCADE)
+# class ProducteCategoria(models.Model):
+#     id_categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+#     id_producte = models.ForeignKey(Producte, on_delete=models.CASCADE)
 
 class Variant(models.Model):
     color = models.CharField(max_length=50, null=False)

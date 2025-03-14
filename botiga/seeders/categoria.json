@@ -1,34 +1,23 @@
 [
-    {
-        "model": "botiga.Categoria",
-        "pk": 1,
-        "fields": {
-            "nom_cat": "Home",
-            "pare": null
-        }
-    },
-    {
-        "model": "botiga.Categoria",
-        "pk": 2,
-        "fields": {
-            "nom_cat": "Dona",
-            "pare": null
-        }
-    },
-    {
-        "model": "botiga.Categoria",
-        "pk": 3,
-        "fields": {
-            "nom_cat": "Running",
-            "pare": 1
-        }
-    },
-    {
-        "model": "botiga.Categoria",
-        "pk": 4,
-        "fields": {
-            "nom_cat": "Futbol",
-            "pare": 2
-        }
-    }
+    {"model": "botiga.Categoria", "pk": 1, "fields": {"nom_cat": "Home", "pare": null}},
+    {"model": "botiga.Categoria", "pk": 2, "fields": {"nom_cat": "Dona", "pare": null}},
+    {"model": "botiga.Categoria", "pk": 3, "fields": {"nom_cat": "Infantil", "pare": null}},
+    
+    {"model": "botiga.Categoria", "pk": 4, "fields": {"nom_cat": "Esportives", "pare": 1}},
+    {"model": "botiga.Categoria", "pk": 5, "fields": {"nom_cat": "Casual", "pare": 1}},
+    
+    {"model": "botiga.Categoria", "pk": 6, "fields": {"nom_cat": "Esportives", "pare": 2}},
+    {"model": "botiga.Categoria", "pk": 7, "fields": {"nom_cat": "Casual", "pare": 2}},
+    
+    {"model": "botiga.Categoria", "pk": 8, "fields": {"nom_cat": "Esportives", "pare": 3}},
+    {"model": "botiga.Categoria", "pk": 9, "fields": {"nom_cat": "Casual", "pare": 3}},
+
+    {"model": "botiga.Categoria", "pk": 10, "fields": {"nom_cat": "Running", "pare": 4}},
+    {"model": "botiga.Categoria", "pk": 11, "fields": {"nom_cat": "Bàsquet", "pare": 4}},
+
+    {"model": "botiga.Categoria", "pk": 12, "fields": {"nom_cat": "Running", "pare": 6}},
+    {"model": "botiga.Categoria", "pk": 13, "fields": {"nom_cat": "Bàsquet", "pare": 6}},
+
+    {"model": "botiga.Categoria", "pk": 14, "fields": {"nom_cat": "Skateboard", "pare": 5}},
+    {"model": "botiga.Categoria", "pk": 15, "fields": {"nom_cat": "Skateboard", "pare": 7}}
 ]

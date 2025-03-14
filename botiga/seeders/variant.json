@@ -7,7 +7,7 @@
             "preu": 120.00,
             "descompte": 10.00,
             "producte": 1,
-            "imatge": "nike_air_zoom_blau.jpg"
+            "imatge": "images/AIR+JORDAN+1+LOW+SE.jpeg"
         }
     },
     {
@@ -18,18 +18,18 @@
             "preu": 130.00,
             "descompte": 5.00,
             "producte": 1,
-            "imatge": "nike_air_zoom_negre.jpg"
+            "imatge": "images/AIR+JORDAN+1+LOW.png"
         }
     },
     {
         "model": "botiga.Variant",
         "pk": 3,
         "fields": {
-            "color": "Blanc",
+            "color": "Rosa",
             "preu": 150.00,
             "descompte": 15.00,
             "producte": 2,
-            "imatge": "adidas_ultraboost_blanc.jpg"
+            "imatge": "images/running-NIKE+VOMERO+18.png"
         }
     },
     {
@@ -40,7 +40,134 @@
             "preu": 140.00,
             "descompte": 8.00,
             "producte": 3,
-            "imatge": "jordan_retro4_vermell.jpg"
+            "imatge": "images/AIR+JORDAN+1+LOW (1).png"
+        }
+    },
+    {"model": "botiga.Variant", "pk": 5, "fields": {"color": "Verd", "preu": 110.00, "descompte": 12.00, "producte": 7, "imatge": "images/WMNS+NIKE+MOTIVA-blue.png"}},
+    {"model": "botiga.Variant", "pk": 6, "fields": {"color": "Groc", "preu": 105.00, "descompte": 7.00, "producte": 7, "imatge": "images/WMNS+NIKE+MOTIVA-blackpng.png"}},
+    {"model": "botiga.Variant", "pk": 7, "fields": {"color": "Gris", "preu": 160.00, "descompte": 10.00, "producte": 7, "imatge": "images/WMNS+NIKE+MOTIVA-blue.png"}},
+    {"model": "botiga.Variant", "pk": 8, "fields": {"color": "Beix", "preu": 165.00, "descompte": 5.00, "producte": 7, "imatge": "images/WMNS+NIKE+MOTIVA-pink.png"}},
+    {"model": "botiga.Variant", "pk": 9, "fields": {"color": "Negre", "preu": 80.00, "descompte": 0.00, "producte": 4, "imatge": "images/AIR+JORDAN+1+LOW+SE.png"}},
+    {"model": "botiga.Variant", "pk": 10, "fields": {"color": "Blanc", "preu": 75.00, "descompte": 5.00, "producte": 4, "imatge": "images/AIR+MAX+DN8 (1).png"}},
+    {
+        "model": "botiga.Variant",
+        "pk": 11,
+        "fields": {
+            "color": "Negre",
+            "preu": 150.00,
+            "descompte": 15.00,
+            "producte": 2,
+            "imatge": "images/skate-boardNIKE+SB+DUNK+LOW+PRO.png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 12,
+        "fields": {
+            "color": "Blau",
+            "preu": 130.00,
+            "descompte": 10.00,
+            "producte": 8,
+            "imatge": "images/W+NIKE+PEGASUS+PREMIUM-black.png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 13,
+        "fields": {
+            "color": "Vermell",
+            "preu": 140.00,
+            "descompte": 12.00,
+            "producte": 9,
+            "imatge": "images/skate-boardNIKE+SB+DUNK+LOW+PRO.png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 14,
+        "fields": {
+            "color": "Verd",
+            "preu": 120.00,
+            "descompte": 8.00,
+            "producte": 10,
+            "imatge": "images/AIR+JORDAN+1+LOW+SE.png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 15,
+        "fields": {
+            "color": "Groc",
+            "preu": 110.00,
+            "descompte": 5.00,
+            "producte": 6,
+            "imatge": "images/AIR+JORDAN+1+LOW (1).png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 16,
+        "fields": {
+            "color": "Blanc",
+            "preu": 115.00,
+            "descompte": 10.00,
+            "producte": 8,
+            "imatge": "images/W+NIKE+PEGASUS+PREMIUM.png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 17,
+        "fields": {
+            "color": "Negre",
+            "preu": 125.00,
+            "descompte": 7.00,
+            "producte": 9,
+            "imatge": "images/AIR+MAX+DN8+AMD.png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 18,
+        "fields": {
+            "color": "Rosa",
+            "preu": 135.00,
+            "descompte": 12.00,
+            "producte": 5,
+            "imatge": "images/casual-rosa-WMNS+NIKE+FIELD+GENERAL.png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 19,
+        "fields": {
+            "color": "Blau",
+            "preu": 145.00,
+            "descompte": 8.00,
+            "producte": 5,
+            "imatge": "AIR+MAX+DN8.png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 20,
+        "fields": {
+            "color": "Taronja",
+            "preu": 155.00,
+            "descompte": 10.00,
+            "producte": 10,
+            "imatge": "images/Esportives-AIR+MAX+DN8.png"
+        }
+    },
+    {
+        "model": "botiga.Variant",
+        "pk": 21,
+        "fields": {
+            "color": "Lila",
+            "preu": 160.00,
+            "descompte": 12.00,
+            "producte": 8,
+            "imatge": "images/AIR+MAX+DN8 (1).png"
         }
     }
 ]

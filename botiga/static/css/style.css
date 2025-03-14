@@ -1,0 +1,24 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Oculto por defecto */
+    width: 250px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+}

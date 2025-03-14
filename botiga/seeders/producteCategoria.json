@@ -1,3 +1,4 @@
+
 [
     {
         "model": "botiga.ProducteCategoria",
@@ -22,5 +23,9 @@
             "id_producte": 3,
             "id_categoria": 4
         }
-    }
+    },
+    {"model": "botiga.ProducteCategoria", "pk": 4, "fields": {"id_producte": 4, "id_categoria": 3}},
+    {"model": "botiga.ProducteCategoria", "pk": 5, "fields": {"id_producte": 5, "id_categoria": 4}},
+    {"model": "botiga.ProducteCategoria", "pk": 6, "fields": {"id_producte": 6, "id_categoria": 5}}
+ 
 ]

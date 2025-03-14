@@ -1,11 +1,19 @@
-{% extends 'layouts/base.html' %}
+{% extends 'layouts/base2.html' %}
 
 {% block content %}
     <h1>{{ product.nom_prod }}</h1>
     <p>{{ product.descripcio }}</p>
     <h2>Precio: {{ selected_variant.preu }}€</h2>
 
-    <!-- 🔹 Selección de variantes -->
+    <div>
+        <h3>Ruta de categorías:</h3>
+        <ul>
+            <!-- <li><a href="{% url 'home' %}">Home</a></li> -->
+            {% for cat in catAcumulades %}
+                <ol><a href="{% url 'category_filter' cat.id %}">{{ cat.nom_cat }}</a>></ol>
+            {% endfor %}
+        </ul>
+    </div>
     <h3>Colores Disponibles:</h3>
     <ul>
         {% for variant in variants %}

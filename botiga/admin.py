@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from botiga.models import (
-    Usuari, Categoria, Producte, ProducteCategoria, Variant, Talla, Stock, 
+    Usuari, Categoria, Producte, Variant, Talla, Stock, 
     IVA, MetodeEnviament, Cistell, Item, Empresa, MetodePagament, Factura, LineaFactura
 )
 

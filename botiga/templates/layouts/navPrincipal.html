@@ -1,18 +1,36 @@
 {% block content %}
-<div class="filtreNom">
-    <h4>Nom</h4>
-    <form method="POST" action="{% url 'home' %}">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="collapse navbar-collapse d-flex justify-content-between p-2" id="navbarSupportedContent">
+        <div class="lefNav d-flex">
+            <a class="navbar-brand" href="{% url 'home' %}">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+        
+            <ul class="navbar-nav mr-auto">
+                {% for category in categories %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'category_filter' category.id %}">{{ category.nom_cat }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+      <form class="form-inline d-flex my-2 my-lg-0" method="POST" action="{% url 'home' %}">
         {% csrf_token %}
-        <input type="text" name="nom" value="{{ name_query }}" placeholder="Nom del producte">
-        <button type="submit">Filtrar</button>
-    </form>
-</div>
-<div class="navbar">
-    <ul>
-        {% for category in categories %}
-            <li><a href="{% url 'category_filter' category.id %}">{{ category.nom_cat }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
+        <input class="form-control m-2" type="text" name="nom" value="{{ name_query }}" placeholder="Nom del producte" aria-label="Search">
+        <button class="btn btn-outline-success m-2 border-white text-white" type="submit">Filtrar</button>
+      </form>
+    </div>
+  </nav>
 {% endblock %}
+
+{% if subcategories %}
+
+<nav class="nav navbar-light" style="background-color: #e3f2fd;"">
+  {% for sub in subcategories %}
+  <li><a class="nav-link" href="{% url 'category_filter' sub.id %}">{{ sub.nom_cat }}</a></li>
+{% endfor %}
+</nav>
+{% endif %}
 

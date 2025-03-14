@@ -1,0 +1,12 @@
+{% if subcategories %}
+<ul class="dropdown-menu">
+    {% for subcategory in subcategories %}
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="{% url 'category_filter' subcategory.id %}">
+                {{ subcategory.nom }}
+            </a>
+            {% include 'subcategories.html' with subcategories=subcategory.subcategories %}
+        </li>
+    {% endfor %}
+</ul>
+{% endif %}

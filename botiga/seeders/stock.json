@@ -1,38 +1,29 @@
 [
-    {
-        "model": "botiga.Stock",
-        "pk": 2,
-        "fields": {
-            "variant": 1,
-            "talla": 2,
-            "quantitat": 15
-        }
-    },
-    {
-        "model": "botiga.Stock",
-        "pk": 3,
-        "fields": {
-            "variant": 2,
-            "talla": 3,
-            "quantitat": 12
-        }
-    },
-    {
-        "model": "botiga.Stock",
-        "pk": 4,
-        "fields": {
-            "variant": 3,
-            "talla": 1,
-            "quantitat": 20
-        }
-    },
-    {
-        "model": "botiga.Stock",
-        "pk": 5,
-        "fields": {
-            "variant": 4,
-            "talla": 2,
-            "quantitat": 18
-        }
-    }
+    {"model": "botiga.Stock", "pk": 2, "fields": {"variant": 1, "talla": 2, "quantitat": 15}},
+    {"model": "botiga.Stock", "pk": 3, "fields": {"variant": 2, "talla": 3, "quantitat": 12}},
+    {"model": "botiga.Stock", "pk": 4, "fields": {"variant": 3, "talla": 1, "quantitat": 20}},
+    {"model": "botiga.Stock", "pk": 5, "fields": {"variant": 4, "talla": 2, "quantitat": 18}},
+    {"model": "botiga.Stock", "pk": 6, "fields": {"variant": 5, "talla": 1, "quantitat": 10}},
+    {"model": "botiga.Stock", "pk": 7, "fields": {"variant": 6, "talla": 2, "quantitat": 12}},
+    {"model": "botiga.Stock", "pk": 8, "fields": {"variant": 7, "talla": 1, "quantitat": 14}},
+    {"model": "botiga.Stock", "pk": 9, "fields": {"variant": 8, "talla": 1, "quantitat": 8}},
+    {"model": "botiga.Stock", "pk": 10, "fields": {"variant": 9, "talla": 2, "quantitat": 20}},
+    {"model": "botiga.Stock", "pk": 11, "fields": {"variant": 19, "talla": 3, "quantitat": 18}},
+    {"model": "botiga.Stock", "pk": 12, "fields": {"variant": 18, "talla": 4, "quantitat": 25}},
+    {"model": "botiga.Stock", "pk": 13, "fields": {"variant": 17, "talla": 5, "quantitat": 30}},
+    {"model": "botiga.Stock", "pk": 14, "fields": {"variant": 16, "talla": 5, "quantitat": 22}},
+    {"model": "botiga.Stock", "pk": 15, "fields": {"variant": 15, "talla": 4, "quantitat": 16}},
+    {"model": "botiga.Stock", "pk": 16, "fields": {"variant": 14, "talla": 3, "quantitat": 30}},
+    {"model": "botiga.Stock", "pk": 17, "fields": {"variant": 13, "talla": 2, "quantitat": 22}},
+    {"model": "botiga.Stock", "pk": 18, "fields": {"variant": 2, "talla": 1, "quantitat": 16}},
+    {"model": "botiga.Stock", "pk": 19, "fields": {"variant": 1, "talla": 3, "quantitat": 14}},
+    {"model": "botiga.Stock", "pk": 20, "fields": {"variant": 3, "talla": 2, "quantitat": 18}},
+    {"model": "botiga.Stock", "pk": 21, "fields": {"variant": 4, "talla": 1, "quantitat": 12}},
+    {"model": "botiga.Stock", "pk": 22, "fields": {"variant": 5, "talla": 3, "quantitat": 20}},
+    {"model": "botiga.Stock", "pk": 23, "fields": {"variant": 6, "talla": 1, "quantitat": 10}},
+    {"model": "botiga.Stock", "pk": 24, "fields": {"variant": 7, "talla": 2, "quantitat": 16}},
+    {"model": "botiga.Stock", "pk": 25, "fields": {"variant": 8, "talla": 3, "quantitat": 14}},
+    {"model": "botiga.Stock", "pk": 26, "fields": {"variant": 9, "talla": 1, "quantitat": 18}},
+    {"model": "botiga.Stock", "pk": 27, "fields": {"variant": 19, "talla": 2, "quantitat": 20}},
+    {"model": "botiga.Stock", "pk": 28, "fields": {"variant": 18, "talla": 3, "quantitat": 22}}
 ]
