@@ -41,6 +41,24 @@ class Variant(models.Model):
     descompte = models.DecimalField(max_digits=5, decimal_places=2, validators=[MinValueValidator(0), MaxValueValidator(100)])
     producte = models.ForeignKey(Producte, on_delete=models.CASCADE)
     imatge = models.CharField(max_length=100, null=False)
+# Esto significa que una variante (Variant) puede tener varias imágenes (ImatgeVariant), y puedes acceder a ellas desde una instancia de Variant usando variant.imatges.all() en lugar de variant.imagevariant_set.all().
+
+# Ejemplo práctico:
+
+# python
+# Copia
+# Modifica
+# # Obtener una variante específica
+# variant = Variant.objects.get(id=1)
+
+# # Obtener todas las imágenes asociadas a esa variante
+# imagenes = variant.imatges.all()  # En vez de variant.imagevariant_set.all()
+class ImatgeVariant(models.Model):
+    variant = models.ForeignKey(Variant, on_delete=models.CASCADE, related_name="imatges")
+    imatge = models.CharField(max_length=255, null=False)  # O usar ImageField si almacenas archivos
+
+    def __str__(self):
+        return f"Imagen de {self.variant.color}"
 
 class Talla(models.Model):
     n_talla = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(60)])
@@ -66,6 +84,10 @@ class Cistell(models.Model):
     usuari = models.ForeignKey(Usuari, on_delete=models.CASCADE)
     data_creacio = models.DateTimeField(auto_now_add=True)
     metod_env = models.ForeignKey(MetodeEnviament,on_delete=models.CASCADE)
+
+    def total_items(self):
+        return sum(item.quantitat for item in self.item_set.all())
+
 
 class Item(models.Model):
     quantitat = models.IntegerField(validators=[MinValueValidator(1)])

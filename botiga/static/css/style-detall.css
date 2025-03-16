@@ -1,0 +1,35 @@
+/* .product-image {
+    max-height: 400px;
+    object-fit: cover;
+} */
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+.thumbnail:hover, .thumbnail.active {
+    opacity: 1;
+}
+.product-image {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+}
+.product-images {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product-details {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.variant-thumbnail.active {
+    border: 2px solid #0d6efd; /* azul bootstrap */
+}

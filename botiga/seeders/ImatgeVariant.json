@@ -1,0 +1,140 @@
+[
+  
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 1, "imatge": "images/zapatosCompletos/air-jordan-se-blanco.jpeg"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 1, "imatge": "images/zapatosCompletos/air-jordan-se-blanco-derecha.jpeg"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 1, "imatge": "images/zapatosCompletos/air-jordan-se-blanco-dosZapatos.jpeg"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 1, "imatge": "images/zapatosCompletos/air-jordan-se-blanco-talon.jpeg"}},
+   
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 2, "imatge": "images/zapatosCompletos/air-jordan-brown.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 2, "imatge": "images/zapatosCompletos/air-jordan-brown-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 2, "imatge": "images/zapatosCompletos/air-jordan-brown-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 2, "imatge": "images/zapatosCompletos/air-jordan-brown-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 3, "imatge": "images/zapatosCompletos/running-nike-vomero-red.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 3, "imatge": "images/zapatosCompletos/running-nike-vomero-red-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 3, "imatge": "images/zapatosCompletos/running-nike-vomero-red-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 3, "imatge": "images/zapatosCompletos/running-nike-vomero-red-talon.png"}},
+
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 4, "imatge": "images/zapatosCompletos/air-jordan-blue.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 4, "imatge": "images/zapatosCompletos/air-jordan-blue-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 4, "imatge": "images/zapatosCompletos/air-jordan-blue-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 4, "imatge": "images/zapatosCompletos/air-jordan-blue-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 5, "imatge": "images/zapatosCompletos/motiva-blue.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 5, "imatge": "images/zapatosCompletos/motiva-blue-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 5, "imatge": "images/zapatosCompletos/motiva-blue-dosZapatillas.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 5, "imatge": "images/zapatosCompletos/motiva-blue-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 6, "imatge": "images/zapatosCompletos/motiva-black.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 6, "imatge": "images/zapatosCompletos/motiva-black-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 6, "imatge": "images/zapatosCompletos/motiva-black-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 6, "imatge": "images/zapatosCompletos/motiva-black-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 7, "imatge": "images/zapatosCompletos/motiva-white.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 7, "imatge": "images/zapatosCompletos/motiva-white-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 7, "imatge": "images/zapatosCompletos/motiva-white-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 7, "imatge": "images/zapatosCompletos/motiva-white-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 8, "imatge": "images/zapatosCompletos/motiva-pink.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 8, "imatge": "images/zapatosCompletos/motiva-pink-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 8, "imatge": "images/zapatosCompletos/motiva-pink-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 8, "imatge": "images/zapatosCompletos/motiva-pink-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 9, "imatge": "images/zapatosCompletos/running-nike-vomero-blue.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 9, "imatge": "images/zapatosCompletos/running-nike-vomero-blue-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 9, "imatge": "images/zapatosCompletos/running-nike-vomero-blue-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 9, "imatge": "images/zapatosCompletos/running-nike-vomero-blue-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 10, "imatge": "images/zapatosCompletos/running-nike-vomero-red.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 10, "imatge": "images/zapatosCompletos/running-nike-vomero-red-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 10, "imatge": "images/zapatosCompletos/running-nike-vomero-red-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 10, "imatge": "images/zapatosCompletos/running-nike-vomero-red-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 11, "imatge": "images/zapatosCompletos/running-nike-vomero-blue.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 11, "imatge": "images/zapatosCompletos/running-nike-vomero-blue-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 11, "imatge": "images/zapatosCompletos/running-nike-vomero-blue-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 11, "imatge": "images/zapatosCompletos/running-nike-vomero-blue-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 12, "imatge": "images/zapatosCompletos/pegasus-black-principal.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 12, "imatge": "images/zapatosCompletos/pegasus-black-dercha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 12, "imatge": "images/zapatosCompletos/pegasus-black-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 12, "imatge": "images/zapatosCompletos/pegasus-black-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 13, "imatge": "images/zapatosCompletos/air-jordan-se-blanco.jpeg"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 13, "imatge": "images/zapatosCompletos/air-jordan-se-blanco-derecha.jpeg"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 13, "imatge": "images/zapatosCompletos/air-jordan-se-blanco-dosZapatos.jpeg"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 13, "imatge": "images/zapatosCompletos/air-jordan-se-blanco-talon.jpeg"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 14, "imatge": "images/zapatosCompletos/air-jordan-purple.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 14, "imatge": "images/zapatosCompletos/air-jordan-purple-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 14, "imatge": "images/zapatosCompletos/air-jordan-purple-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 14, "imatge": "images/zapatosCompletos/air-jordan-purple-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 15, "imatge": "images/zapatosCompletos/motiva-white.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 15, "imatge": "images/zapatosCompletos/motiva-white-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 15, "imatge": "images/zapatosCompletos/motiva-white-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 15, "imatge": "images/zapatosCompletos/motiva-white-talon.png"}},
+
+ 
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 16, "imatge": "images/zapatosCompletos/pegasus-white-principal.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 16, "imatge": "images/zapatosCompletos/pegasus-white-dercha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 16, "imatge": "images/zapatosCompletos/pegasus-white-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 16, "imatge": "images/zapatosCompletos/pegasus-white-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 17, "imatge": "images/zapatosCompletos/air-jordan-se.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 17, "imatge": "images/zapatosCompletos/air-jordan-se-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 17, "imatge": "images/zapatosCompletos/air-jordan-se-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 17, "imatge": "images/zapatosCompletos/air-jordan-se-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 18, "imatge": "images/zapatosCompletos/WMNS-NIKE-FIELD-gris.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 18, "imatge": "images/zapatosCompletos/WMNS-NIKE-FIELD-gris-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 18, "imatge": "images/zapatosCompletos/WMNS-NIKE-FIELD-gris-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 18, "imatge": "images/zapatosCompletos/WMNS-NIKE-FIELD-gris-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 19, "imatge": "images/zapatosCompletos/WMNS-NIKE-FIELD-rosa.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 19, "imatge": "images/zapatosCompletos/WMNS-NIKE-FIELD-rosa-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 19, "imatge": "images/zapatosCompletos/WMNS-NIKE-FIELD-rosa-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 19, "imatge": "images/zapatosCompletos/WMNS-NIKE-FIELD-rosa-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 20, "imatge": "images/zapatosCompletos/air-max-dn8-red.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 20, "imatge": "images/zapatosCompletos/air-max-dn8-red-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 20, "imatge": "images/zapatosCompletos/air-max-dn8-red-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 20, "imatge": "images/zapatosCompletos/air-max-dn8-red-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 21, "imatge": "images/zapatosCompletos/air-jordan-purple.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 21, "imatge": "images/zapatosCompletos/air-jordan-purple-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 21, "imatge": "images/zapatosCompletos/air-jordan-purple-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 21, "imatge": "images/zapatosCompletos/air-jordan-purple-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 22, "imatge": "images/zapatosCompletos/skate-boardNIKE.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 22, "imatge": "images/zapatosCompletos/skate-boardNIKE-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 22, "imatge": "images/zapatosCompletos/skate-boardNIKE-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 22, "imatge": "images/zapatosCompletos/skate-boardNIKE-talon.jpeg"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 23, "imatge": "images/zapatosCompletos/skate-boardNIKE.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 23, "imatge": "images/zapatosCompletos/skate-boardNIKE-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 23, "imatge": "images/zapatosCompletos/skate-boardNIKE-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 23, "imatge": "images/zapatosCompletos/skate-boardNIKE-talon.jpeg"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 24, "imatge": "images/zapatosCompletos/NIKE-VERTEBRAE-green.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 24, "imatge": "images/zapatosCompletos/NIKE-VERTEBRAE-green-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 24, "imatge": "images/zapatosCompletos/NIKE-VERTEBRAE-green-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 24, "imatge": "images/zapatosCompletos/NIKE-VERTEBRAE-green-talon.jpeg"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 25, "imatge": "images/zapatosCompletos/NIKE-VERTEBRAE-yellow.jpeg"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 25, "imatge": "images/zapatosCompletos/NIKE-VERTEBRAE-yellow-derecha.jpeg"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 25, "imatge": "images/zapatosCompletos/NIKE-VERTEBRAE-yellow-dosZapatos.jpeg"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 25, "imatge": "images/zapatosCompletos/NIKE-VERTEBRAE-yellow-talon.jpeg"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 26, "imatge": "images/zapatosCompletos/air-max-dn8-blue.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 26, "imatge": "images/zapatosCompletos/air-max-dn8-blue-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 26, "imatge": "images/zapatosCompletos/air-max-dn8-blue-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 26, "imatge": "images/zapatosCompletos/air-max-dn8-blue-talon.png"}},
+
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 27, "imatge": "images/zapatosCompletos/air-max-dn8-green.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 27, "imatge": "images/zapatosCompletos/air-max-dn8-green-derecha.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 27, "imatge": "images/zapatosCompletos/air-max-dn8-green-dosZapatos.png"}},
+    {"model": "botiga.ImatgeVariant", "fields": {"variant": 27, "imatge": "images/zapatosCompletos/air-max-dn8-green-talon.png"}}
+]

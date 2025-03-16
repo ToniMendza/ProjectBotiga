@@ -41,7 +41,7 @@
         "fields": {
             "nom_prod": "New Balance 990",
             "descripcio": "Sabatilles icòniques per a running i moda urbana",
-            "categories": [4]
+            "categories": [7]
         }
     },
     {
@@ -86,6 +86,33 @@
         "fields": {
             "nom_prod": "Under Armour HOVR",
             "descripcio": "Sabatilles de running amb gran amortiment",
+            "categories": [5]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 11,
+        "fields": {
+            "nom_prod": "Mizuno Wave Rider",
+            "descripcio": "Sabatilles de running amb gran comoditat i durabilitat",
+            "categories": [11]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 12,
+        "fields": {
+            "nom_prod": "Saucony Kinvara",
+            "descripcio": "Sabatilles de skateboard lleugeres per a corredors ràpids",
+            "categories": [14]
+        }
+    },
+    {
+        "model": "botiga.Producte",
+        "pk": 13,
+        "fields": {
+            "nom_prod": "Element Nyjah",
+            "descripcio": "Sabatilles de skateboard dissenyades per Nyjah Huston",
             "categories": [15]
         }
     }

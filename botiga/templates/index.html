@@ -1,30 +1,7 @@
-{% extends 'layouts/base.html' %}
+{% extends 'layouts/baseproducte.html' %}
 
 {% block content %}
 <div class="w-80">
-
-<!-- breadcrumb (miga de pan) es nativa de Bootstrap. Es un tipo de navegación
-  que muestra la ubicación del usuario dentro de una jerarquía de páginas en un sitio web. -->
-<nav class="breadcrumb-container bg-light shadow-sm py-2">
-    <div class="container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">
-                    <a href="{% url 'home' %}" class="text-decoration-none text-primary">Inicio</a>
-                </li>
-                {% for cat in catAcumulades %}
-                    <li class="breadcrumb-item">
-                        <a href="{% url 'category_filter' cat.id %}" class="text-decoration-none text-dark">
-                            {{ cat.nom_cat }}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ol>
-        </nav>
-    </div>
-</nav>
-
-<!-- 🛒 Espacio adicional para evitar que se solape con el contenido -->
 
 {% load static %}
 
@@ -40,11 +17,11 @@
                          <!-- Seleccionamos un variant por defecto para mostrar la información del producto -->
                         {% with product.variant_set.first as default_variant %}
                         <div class="text-center p-3">
-                            <a href="{% url 'product_detail' product.id %}">
+                            <a href="{% url 'product_detail_variant' default_variant.id %}">
                                 <img id="mainImage-{{ product.id }}" src="{% static default_variant.imatge %}" 
                                      alt="{{ default_variant.color }}" class="img-fluid main-image">
                             </a>
-                        </div>
+                        </div>                        
 
                         <!-- ℹ️ Información del producto -->
                         <div class="card-body text-center d-flex flex-column">
@@ -102,6 +79,9 @@
                                                                 '{{ variant.descompte }}', 
                                                                 '{{ variant.color }}', 
                                                                 [{% for stock in variant.stock_set.all %}'{{ stock.talla.n_talla }}'{% if not forloop.last %}, {% endif %}{% endfor %}])">
+
+                                                    <!-- El for recorre las tallas y agrega comas excepto en la última iteración. -->
+
                                 {% endfor %}
                             </div>
                         </div>

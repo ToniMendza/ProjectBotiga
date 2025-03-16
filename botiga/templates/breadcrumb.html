@@ -1,0 +1,20 @@
+<!-- breadcrumb (miga de pan) es nativa de Bootstrap. Es un tipo de navegación
+  que muestra la ubicación del usuario dentro de una jerarquía de páginas en un sitio web. -->
+<nav class="breadcrumb-container bg-light shadow-sm py-2">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'home' %}" class="text-decoration-none text-primary">Inicio</a>
+                </li>
+                {% for cat in catAcumulades %}
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'category_filter' cat.id %}" class="text-decoration-none text-dark">
+                            {{ cat.nom_cat }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ol>
+        </nav>
+    </div>
+</nav>

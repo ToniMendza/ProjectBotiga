@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detall Producte</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="{% static 'css/style-detall.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <!-- El teu CSS personalitzat -->
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> -->
 </head>
 <body>
-
+    <!-- {% include '../navPrincipal.html' %} -->
+    {% include '../navCistell.html' %}
+    {% include '../breadcrumb.html' %}
 
     <main>
         {% block content %}{% endblock %}
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    {% include '../footer.html' %}
 </body>
 </html>

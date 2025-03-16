@@ -107,35 +107,52 @@ def product_list(request, category_id=None, product_id=None, variant_id=None,tal
         # 'categories_with_subs': categories_with_subs
     })
 
-def product_detall(request, product_id, variant_id=None):
-    product = get_object_or_404(Producte, id=product_id)
-    selected_category=None
-    catAcumulades = []
+def product_detall(request, variant_id):
+    # 🔹 Obtener la variante seleccionada directamente
+    selected_variant = get_object_or_404(Variant, id=variant_id)
 
-    # 🔹 Obtener la primera categoría asociada al producto (o dejar en None si no tiene)
+    # 🔹 Obtener el producto relacionado
+    product = selected_variant.producte
+
+    # 🔹 Obtener la categoría del producto
     selected_category = product.categories.first()
-
-    # 🔹 Si tiene categoría, obtener historial de categorías
     catAcumulades = get_ancestor_categories(selected_category) if selected_category else []
 
     # 🔹 Obtener todas las variantes del producto
     variants = product.variant_set.all()
 
+    # 🔹 Obtener las imágenes de la variante seleccionada
+    imatges = selected_variant.imatges.all()
 
-    # Si se selecciona una variante, la usamos; si no, tomamos la primera
-    if variant_id:
-        selected_variant = get_object_or_404(Variant, id=variant_id, producte=product)
-    else:
-        selected_variant = variants.first()
-
-    # Obtener stocks de la variante seleccionada
+    # 🔹 Obtener stock disponible de la variante seleccionada
     stocks = selected_variant.stock_set.all()
 
     return render(request, 'product_detail.html', {
-        'product': product,
-        'variants': variants,
-        'selected_variant': selected_variant,
-        'stocks': stocks,
-        'selected_category': selected_category,
-        'catAcumulades': catAcumulades  # 🔹 Pasamos las categorías acumuladas a la plantilla
+        'selected_variant': selected_variant,  # 🔹 Pasamos la variante directamente
+        'product': product,  # 🔹 Para mostrar nombre, descripción, etc.
+        'variants': variants,  # 🔹 Para cambiar entre variantes
+        'stocks': stocks,  # 🔹 Para mostrar tallas disponibles
+        'selected_category': selected_category,  # 🔹 Para breadcrumbs
+        'catAcumulades': catAcumulades,  # 🔹 Para mostrar ruta de categorías
+        'imatges': imatges  # 🔹 Para mostrar imágenes de la variante seleccionada
     })
+
+def afegir_a_cistell(request):
+    if request.method == 'POST':
+        stock_id = request.POST.get('stock_id')
+        quantitat = int(request.POST.get('quantitat', 1))
+        stock = get_object_or_404(Stock, id=stock_id)
+
+        # 🔍 Buscar cistell actiu de l'usuari o crear-lo
+        cistell, created = Cistell.objects.get_or_create(usuari=request.user.usuari, metod_env_id=1)  # ⚠️ Ajusta ID metode enviament
+
+        # 🔄 Buscar si ja hi ha aquest ítem i sumar quantitat
+        item, item_created = Item.objects.get_or_create(cistell=cistell, stock=stock)
+        if item_created:
+            item.quantitat = quantitat
+        else:
+            item.quantitat += quantitat
+        item.save()
+
+        # ✅ Redirigeix al detall del producte
+        return redirect('product_detall', variant_id=stock.variant.id)
